@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/*Navbar*/
+
+#navbar{
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: .5em 5em ;
+    box-shadow: 5px 5px 20 rgba(0, 0, 0, .5);
+    background: black;
+}
+
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 300;
+    color: red !important;
+}
+
+#navbarSupportedContent a{
+    color: #fff;
+    border-bottom:  2px solid transparent;
+}
+
+#navbarSupportedContent a:hover{
+    color: #fff;
+    border-bottom:  2px solid red;
+}
+
+#navbarSupportedContent button{
+    background-color: red;
+    border-radius: 5px;
+    width: 100px;
+    color: white !important;
+
+
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Home*/
+#Home{
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.2)),url(bg.jfif);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#Home h1{
+    font-size: 100px;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow:  0px 1px 0px #ccc,0px 2px 0px #ccc,0px 3px 0px #ccc,0px 4px 0px #ccc,5px 1px 0px #ccc,0px 6px 0px #ccc;
+}
+
+#Home p{
+    font-size: 18px;
+    color: #fff;
+}
+
+#Home .input-group{
+    width: 40%;
+    height: 45px;
+
+}
+.btn-sigin{
+    background-color: green !important;
+    color: white !important;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .5);
+}
+.btn-sigin1{
+    background-color: red !important;
+    color: white !important;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .5);
+}
+
+/*About*/
+
+#about{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+#about h1{
+    font-weight: 800;
+    font-size: 50px;
+    color: #fff;
+}
+
+#about h1:hover{
+    font-weight: 800;
+    font-size: 50px;
+    color: #fff;
+    border-bottom: 5px solid purple;
+    width: 48%;
+}
+
+#about p{
+    color:#fff;
+}
+
+/*Products*/
+
+#product{
+    background-color: #e5e5e5;
+}
+
+#product h1{
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#product img{
+
+    width: 200px;
+    height: 200px;
+
+}
+.card{ 
+    height: 300px;
+    width: 250px;
+    background-color: #e5e5e5 !important;
+    border: none;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, .3),
+                inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 60px;
+
+}
+
+.card:hover{
+
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .3),
+    inset -4px -4px 10px white;
+
+    transition: .2s;
+
+}
+   
+/* Footer */
+
+footer{
+    color: black;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #about h1:hover{
+        font-weight: 800;
+        font-size: 50px;
+        color: #fff;
+        border-bottom: 5px solid purple;
+        width:60%;
+    }
+  
+  }
