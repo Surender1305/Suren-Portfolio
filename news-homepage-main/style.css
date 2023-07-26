@@ -1,0 +1,67 @@
+.navbar{
+    background-color: transparent !important;
+    margin: 45px 125px 15px 125px;
+}
+
+.navbar li{
+    margin-right: 15px;
+}
+
+.back{
+    background-color: black;
+    color: #fff;
+}
+
+.back h3{
+    color: goldenrod;
+    margin-top: 15px;
+}
+
+.back p{
+    color: #d3d3d3;
+}
+
+.marginr{
+    margin-top: 15px;
+}
+
+
+.marginr h2{
+    
+    font-size: 45px;
+    font-weight: 900;
+}
+.btn{
+    padding: 5px;
+    width: 50%;
+}
+
+.marginr p{
+    margin-right: 10px;
+}
+
+.topmar{
+    margin-top: 50px;
+    
+}
+
+.topmar span{
+    font-weight: 700;
+}
+.topmar p{
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        margin: 25px;
+    }
+  }

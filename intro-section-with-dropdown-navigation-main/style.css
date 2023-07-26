@@ -1,0 +1,28 @@
+.navbar-brand{
+    font-size: 24px;
+    font-weight: 600;
+}
+.trans{
+    border: none;
+    background-color: transparent;
+
+}
+
+.navbar{
+    background-color: transparent !important;
+}
+.topic1{
+    font-size: 80px;
+    font-weight: 600;
+    margin-top: 80px;
+    margin-bottom: 35px;
+}
+.brands{
+    margin-top: 50px;
+}
+
+@media (max-width:580px) {
+    .center1 {
+      text-align: center !important;
+    }
+  }
