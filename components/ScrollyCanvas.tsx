@@ -25,9 +25,11 @@ export default function ScrollyCanvas() {
   // Preload images
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
+    const isMobileDevice = window.innerWidth < 768;
+    const framesToLoad = isMobileDevice ? 1 : FRAME_COUNT;
     let loadedCount = 0;
 
-    for (let i = 0; i < FRAME_COUNT; i++) {
+    for (let i = 0; i < framesToLoad; i++) {
       const img = new Image();
       img.src = getFramePath(i);
       
@@ -94,7 +96,7 @@ export default function ScrollyCanvas() {
 
   // Map progress to frame index
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (images.length === 0) return;
+    if (images.length <= 1) return;
     
     const frameIndex = Math.min(
       FRAME_COUNT - 1,

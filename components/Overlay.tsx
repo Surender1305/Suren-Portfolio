@@ -12,23 +12,23 @@ export default function Overlay() {
 
   // Timeline mapped from 0 to 1 based on the parent's 500vh scroll section
   // Text 1 (Hero): 0% to 5% (fades out immediately when scrolling)
-  const opacity1 = useTransform(scrollYProgress, [0, 0.03], [1, 0]);
-  const scale1 = useTransform(scrollYProgress, [0, 0.05], [1, 1.1]);
-  const y1 = useTransform(scrollYProgress, [0, 0.05], [0, -50]);
-  const pointerEvents1 = useTransform(scrollYProgress, [0, 0.03], ["auto", "none"]);
+  const opacity1 = useTransform(scrollYProgress, [0, 0.03], [1, 0], { clamp: true });
+  const scale1 = useTransform(scrollYProgress, [0, 0.05], [1, 1.1], { clamp: true });
+  const y1 = useTransform(scrollYProgress, [0, 0.05], [0, -50], { clamp: true });
+  const pointerEvents1 = useTransform(scrollYProgress, [0, 0.03], ["auto", "none"], { clamp: true });
   const display1 = useTransform(scrollYProgress, (pos) => pos > 0.03 ? "none" : "flex");
 
   // Text 2 (Left): 20% to 40%
-  const opacity2 = useTransform(scrollYProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0]);
-  const x2 = useTransform(scrollYProgress, [0.15, 0.45], [-50, 0]);
+  const opacity2 = useTransform(scrollYProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0], { clamp: true });
+  const x2 = useTransform(scrollYProgress, [0.15, 0.45], [-50, 0], { clamp: true });
 
   // Text 3 (Right): 50% to 70%
-  const opacity3 = useTransform(scrollYProgress, [0.45, 0.55, 0.65, 0.75], [0, 1, 1, 0]);
-  const x3 = useTransform(scrollYProgress, [0.45, 0.75], [50, 0]);
+  const opacity3 = useTransform(scrollYProgress, [0.45, 0.55, 0.65, 0.75], [0, 1, 1, 0], { clamp: true });
+  const x3 = useTransform(scrollYProgress, [0.45, 0.75], [50, 0], { clamp: true });
 
   // Text 4 (Center Bottom): 80% to 100%
-  const opacity4 = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
-  const y4 = useTransform(scrollYProgress, [0.75, 1], [50, 0]);
+  const opacity4 = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1], { clamp: true });
+  const y4 = useTransform(scrollYProgress, [0.75, 1], [50, 0], { clamp: true });
 
   return (
     <div ref={containerRef} className="absolute inset-0 pointer-events-none h-[500vh]">

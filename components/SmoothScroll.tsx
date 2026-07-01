@@ -8,6 +8,12 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
+    
+    // Disable smooth scroll on mobile / touch-primary devices to preserve native kinetic scrolling
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

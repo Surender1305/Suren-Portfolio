@@ -16,7 +16,9 @@ export default function Loader({ onLoaded }: { onLoaded: () => void }) {
 
   useEffect(() => {
     // Start warming up the browser cache by loading images silently in the background
-    for (let i = 0; i < FRAME_COUNT; i++) {
+    const isMobileDevice = window.innerWidth < 768;
+    const framesToLoad = isMobileDevice ? 1 : FRAME_COUNT;
+    for (let i = 0; i < framesToLoad; i++) {
       const img = new Image();
       img.src = getFramePath(i);
     }
