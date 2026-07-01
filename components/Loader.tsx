@@ -15,41 +15,31 @@ export default function Loader({ onLoaded }: { onLoaded: () => void }) {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    let loadedCount = 0;
-    
-    // Simple fast simulation of loading if images are cached
-    const interval = setInterval(() => {
-      // Just a fallback in case image load events fail
-    }, 100);
-
+    // Start warming up the browser cache by loading images silently in the background
     for (let i = 0; i < FRAME_COUNT; i++) {
       const img = new Image();
       img.src = getFramePath(i);
-      img.onload = () => {
-        loadedCount++;
-        setProgress(Math.floor((loadedCount / FRAME_COUNT) * 100));
-        
-        if (loadedCount === FRAME_COUNT) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsVisible(false);
-            setTimeout(onLoaded, 1000); // Wait for fade out animation
-          }, 500);
-        }
-      };
-      img.onerror = () => {
-        // Fallback for errors to prevent stuck loader
-        loadedCount++;
-        setProgress(Math.floor((loadedCount / FRAME_COUNT) * 100));
-        if (loadedCount === FRAME_COUNT) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsVisible(false);
-            setTimeout(onLoaded, 1000);
-          }, 500);
-        }
-      }
     }
+
+    // Fast simulated progress timer (1.5 seconds total)
+    const duration = 1500; // 1.5 seconds
+    const intervalTime = 30; // ms per tick
+    const totalSteps = duration / intervalTime;
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const currentProgress = Math.min(Math.floor((currentStep / totalSteps) * 100), 100);
+      setProgress(currentProgress);
+
+      if (currentStep >= totalSteps) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setIsVisible(false);
+          setTimeout(onLoaded, 1000); // Wait for fade out animation
+        }, 300);
+      }
+    }, intervalTime);
 
     return () => clearInterval(interval);
   }, [onLoaded]);
