@@ -21,7 +21,7 @@ export default function Contact() {
           Let's build <br/> <span className="text-[#0070f3]">something amazing.</span>
         </h2>
         <a 
-          href="mailto:contact@surender.com"
+          href="mailto:darsuren121@gmail.com"
           className="group relative inline-flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform"
         >
           <Mail size={24} />
