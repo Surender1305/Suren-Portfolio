@@ -26,7 +26,7 @@ export default function About() {
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-4xl md:text-6xl font-medium leading-tight tracking-tight mb-8">
+            <h2 className="text-2xl sm:text-4xl md:text-6xl font-medium leading-tight tracking-tight mb-8">
               {text.split(" ").map((word, i) => (
                 <motion.span
                   key={i}
@@ -60,10 +60,10 @@ export default function About() {
           </motion.div>
         </div>
 
-        <div className="lg:col-span-5 relative h-[600px] w-full rounded-3xl overflow-hidden glass border border-white/10 hidden lg:block">
+        <div className="lg:col-span-5 relative h-[350px] md:h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden glass border border-white/10 block mt-8 lg:mt-0">
           <motion.div 
             style={{ y }}
-            className="absolute inset-[-20%] w-[140%] h-[140%] bg-gradient-to-br from-[#0070f3]/20 via-transparent to-purple-500/20 blur-3xl opacity-50"
+            className="absolute inset-[-20%] w-[140%] h-[140%] bg-gradient-to-br from-[#0070f3]/20 via-transparent to-purple-500/20 blur-3xl opacity-50 pointer-events-none"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <Image 

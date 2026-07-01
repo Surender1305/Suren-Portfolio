@@ -35,37 +35,37 @@ export default function Overlay() {
       {/* 0% - Hero Section */}
       <motion.div 
         style={{ opacity: opacity1, scale: scale1, y: y1, pointerEvents: pointerEvents1 as any, display: display1 }}
-        className="sticky top-0 h-screen flex-col items-center justify-center px-4"
+        className="sticky top-0 h-[100dvh] flex flex-col items-center justify-center px-4"
       >
         <div className="mb-4">
-          <span className="px-4 py-2 rounded-full glass text-sm font-medium tracking-wide text-white/80">
+          <span className="px-4 py-2 rounded-full glass text-xs sm:text-sm font-medium tracking-wide text-white/80">
             Available for freelance work
           </span>
         </div>
         
-        <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-tight mt-6 text-center text-white drop-shadow-lg">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-tight mt-4 sm:mt-6 text-center text-white drop-shadow-lg">
           Hi, I'm Surender.
         </h1>
         
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium text-white mt-4 tracking-tight text-center drop-shadow-md">
+        <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white mt-3 sm:mt-4 tracking-tight text-center drop-shadow-md">
           Creative Developer.
         </h2>
         
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mt-8 font-light tracking-wide text-center drop-shadow-md">
+        <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-6 sm:mt-8 font-light tracking-wide text-center drop-shadow-md px-4">
           Building premium digital experiences, AI-powered tools, and highly performant full-stack systems.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 mt-12">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-12 w-full sm:w-auto px-8 sm:px-0">
           <a 
             href="#projects" 
-            className="px-8 py-4 rounded-full bg-white text-black font-semibold tracking-wide hover:scale-105 transition-transform"
+            className="px-8 py-3.5 sm:py-4 rounded-full bg-white text-black font-semibold tracking-wide hover:scale-105 transition-transform text-center"
           >
             View Projects
           </a>
           <a 
             href="/resume.pdf" 
             target="_blank"
-            className="px-8 py-4 rounded-full glass font-semibold tracking-wide hover:bg-white/10 transition-colors border border-white/10"
+            className="px-8 py-3.5 sm:py-4 rounded-full glass font-semibold tracking-wide hover:bg-white/10 transition-colors border border-white/10 text-center"
           >
             Download Resume
           </a>
@@ -75,10 +75,10 @@ export default function Overlay() {
       {/* 30% - Left aligned */}
       <motion.div 
         style={{ opacity: opacity2, x: x2 }}
-        className="sticky top-0 h-screen flex flex-col justify-center items-start pl-[10vw] -mt-[100vh]"
+        className="sticky top-0 h-[100dvh] flex flex-col justify-center items-start px-6 md:pl-[10vw] -mt-[100dvh]"
       >
-        <div className="glass px-10 py-8 rounded-2xl">
-          <h2 className="text-3xl md:text-5xl font-bold glow-text leading-tight max-w-[15ch] mix-blend-difference">
+        <div className="glass px-6 py-5 sm:px-10 sm:py-8 rounded-2xl max-w-[90vw] sm:max-w-none">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold glow-text leading-tight max-w-[15ch] mix-blend-difference">
             I build digital experiences.
           </h2>
         </div>
@@ -87,10 +87,10 @@ export default function Overlay() {
       {/* 60% - Right aligned */}
       <motion.div 
         style={{ opacity: opacity3, x: x3 }}
-        className="sticky top-0 h-screen flex flex-col justify-center items-end pr-[10vw] -mt-[100vh]"
+        className="sticky top-0 h-[100dvh] flex flex-col justify-center items-end px-6 md:pr-[10vw] -mt-[100dvh]"
       >
-        <div className="glass px-10 py-8 rounded-2xl text-right">
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight max-w-[15ch] mix-blend-difference">
+        <div className="glass px-6 py-5 sm:px-10 sm:py-8 rounded-2xl text-right max-w-[90vw] sm:max-w-none">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-[15ch] mix-blend-difference">
             Bridging design<br/>and engineering.
           </h2>
         </div>
@@ -99,10 +99,10 @@ export default function Overlay() {
       {/* 90% - Center Bottom */}
       <motion.div 
         style={{ opacity: opacity4, y: y4 }}
-        className="sticky top-0 h-screen flex flex-col justify-end items-center pb-[15vh] -mt-[100vh]"
+        className="sticky top-0 h-[100dvh] flex flex-col justify-end items-center pb-[12vh] sm:pb-[15vh] px-4 -mt-[100dvh]"
       >
-        <div className="glass px-12 py-6 rounded-full">
-          <h2 className="text-2xl md:text-4xl font-medium tracking-wide mix-blend-difference">
+        <div className="glass px-8 py-4 sm:px-12 sm:py-6 rounded-full max-w-[90vw] sm:max-w-none text-center">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-medium tracking-wide mix-blend-difference">
             Every pixel has purpose.
           </h2>
         </div>

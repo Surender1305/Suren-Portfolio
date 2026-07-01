@@ -30,7 +30,7 @@ export default function Experience() {
         transition={{ duration: 0.8 }}
         className="mb-20"
       >
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Experience</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter mb-4">Experience</h2>
         <div className="w-24 h-1 bg-[#0070f3]/50 rounded-full" />
       </motion.div>
 

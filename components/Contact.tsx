@@ -17,7 +17,7 @@ export default function Contact() {
         transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
         className="flex flex-col items-center text-center mb-24"
       >
-        <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-tight">
+        <h2 className="text-3xl sm:text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-tight">
           Let's build <br/> <span className="text-[#0070f3]">something amazing.</span>
         </h2>
         <a 

@@ -36,7 +36,7 @@ export default function Skills() {
         transition={{ duration: 0.8 }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Core Technologies</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter mb-4">Core Technologies</h2>
       </motion.div>
 
       <motion.div 
