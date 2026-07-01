@@ -11,10 +11,10 @@ const experiences = [
     description: "Built multiple production-grade apps including projects for US clients. Focused on performant Flutter applications and full-stack integrations.",
   },
   {
-    role: "Flutter Development Intern",
-    company: "Bright Tech",
+    role: "Programming Staff",
+    company: "BrightTec",
     period: "2023 - 2024",
-    description: "Developed and maintained core features for enterprise mobile applications. Collaborated with design and backend teams to ensure seamless UX and API integrations.",
+    description: "Developed software modules, instructed programming concepts, and built application features. Collaborated with teams to deliver robust software solutions and optimize performance.",
   }
 ];
 
